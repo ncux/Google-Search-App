@@ -1,10 +1,13 @@
 import 'tailwindcss/tailwind.css'
 import { ThemeState } from "../context/theme";
+import { ResultsState } from "../context/results";
 
 function MyApp({ Component, pageProps }) {
   return (
       <ThemeState>
-        <Component {...pageProps} />
+        <ResultsState>
+            <Component {...pageProps} />
+        </ResultsState>
       </ThemeState>
   );
 }

@@ -22,7 +22,9 @@ export default function Layout({ title, keywords, description, children }) {
             <Navbar />
 
             <div className={ isDark ? 'dark' : '' }>
-                { children }
+                <div className="p-4">
+                    { children }
+                </div>
             </div>
 
             <Footer />

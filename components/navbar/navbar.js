@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import classes from "./navbar.module.css";
 import { ThemeContext } from "../../context/theme";
+import Search from "../search/search";
 
 export default function Navbar() {
 
@@ -17,6 +18,8 @@ export default function Navbar() {
                     { isDark ? 'Light' : 'Dark' }
                 </button>
             </div>
+
+            <Search />
 
         </nav>
     );
