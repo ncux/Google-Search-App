@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useContext } from "react";
-import classes from "./navbar.module.css";
 import { ThemeContext } from "../../context/theme";
 import Search from "../search/search";
+import { Links } from "../links";
 
 export default function Navbar() {
 
@@ -20,6 +20,8 @@ export default function Navbar() {
             </div>
 
             <Search />
+                <br />
+            <Links />
 
         </nav>
     );

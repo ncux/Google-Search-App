@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { RAPID_API_HEADERS, BASE_URL } from "../config";
 
 export const ResultsContext = createContext();
@@ -6,7 +6,7 @@ export const ResultsContext = createContext();
 export const ResultsState = ({ children }) => {
 
     const [loading, setLoading] = useState(false);
-    const [query, setQuery] = useState('cars');
+    const [query, setQuery] = useState('');
     const [results, setResults] = useState({ });
 
     const getSearchResults = async (type) => {  // type = search/images/videos/news

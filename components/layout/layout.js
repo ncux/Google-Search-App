@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { useContext } from "react";
 import Navbar from "../navbar/navbar";
 import Footer from "../footer/footer";
@@ -8,8 +7,6 @@ import { ThemeContext } from "../../context/theme";
 export default function Layout({ title, keywords, description, children }) {
 
     const { isDark } = useContext(ThemeContext);
-
-    const router = useRouter();
 
     return (
         <div >

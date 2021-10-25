@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Results from "../components/results/results";
 import Layout from "../components/layout/layout";
 
