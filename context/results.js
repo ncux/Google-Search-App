@@ -6,8 +6,8 @@ export const ResultsContext = createContext();
 export const ResultsState = ({ children }) => {
 
     const [loading, setLoading] = useState(false);
-    const [query, setQuery] = useState('');
-    const [results, setResults] = useState([]);
+    const [query, setQuery] = useState('cars');
+    const [results, setResults] = useState({ });
 
     const getSearchResults = async (type) => {  // type = search/images/videos/news
         try {
@@ -18,8 +18,9 @@ export const ResultsState = ({ children }) => {
             };
             const response = await fetch(`${BASE_URL}${type}`, options);
             const data = await response.json();
+            console.log(data);
             if(response.ok) {
-                setResults(data.results);
+                setResults(data);
                 setLoading(false);
             }
 
